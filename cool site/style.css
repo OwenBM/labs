@@ -1,0 +1,54 @@
+body {
+    background-color: #061130;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 50px;
+}
+
+header span {
+    font-size: 20px;
+    padding: 30px;
+}
+
+article {
+    margin-left: 100px;
+}
+
+article p {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+article h1 {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 25px;
+}
+
+article p.yellow {
+    color: yellow;
+}
+
+weirdlinkarea {
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer>* {
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.stay-flexy {
+    display: flex;
+    height: 30px;
+}
