@@ -1,0 +1,8 @@
+.header-border {
+    border-bottom: 30px;
+    border-color: palevioletred;
+}
+
+.money-box {
+    max-width: fit-content;
+}
