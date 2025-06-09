@@ -40,7 +40,7 @@ export class Jot {
               <div class="row">
                 <div class="col-12">
                   <div class="mt-3 ">
-                    <form onsubmit="app.JotController.saveActiveJot()">
+                    <form onsubmit="app.JotService.saveActiveJot()">
                       <button type="submit" class="btn btn-success ms-3 me-2">Save</button>
                       <button type="button" onclick="app.JotController.deleteActiveJot()" class="btn btn-danger">Delete</button>
                       <textarea name="body" id="active-jot" class="m-3 p-3 right-card-format text-light">${this.body}</textarea>

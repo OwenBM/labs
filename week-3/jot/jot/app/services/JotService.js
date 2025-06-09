@@ -56,6 +56,17 @@ class JotService {
         jotCardController.drawJot()
     }
 
+    saveActiveJot() {
+        event.preventDefault()
+        // console.log('saving');
+        const form = event.target
+        const newJotText = form.body.value
+        AppState.activeJot.UpdatedAt = new Date().toLocaleString()
+        // console.log(newJotText);
+        this.setActiveJotBody(newJotText)
+        jotCardController.drawJot()
+    }
+
 }
 
 export const jotService = new JotService()

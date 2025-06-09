@@ -7,9 +7,11 @@ import { JotCardController, jotCardController } from "./JotCardController.js";
 export class JotController {
     constructor() {
         // console.log('jot controller works');
-        this.drawJotCount()
         AppState.on('activeJot', this.drawActiveJot)
+        // TODO register observer for jots in the appstate, and use your drawjots function as callback
+        // TODO register observer for jots in the appstate, and use your dawJotCount
         jotService.loadJots()
+        this.drawJotCount()
         this.drawActiveJot()
     }
 
@@ -53,18 +55,10 @@ export class JotController {
         const confirmed = confirm('Deleting a Jot is permanent, are you sure you want to delete?')
         if (confirmed == false) return
         jotService.deleteActiveJot()
+        this.drawJotCount()
     }
 
-    saveActiveJot() {
-        event.preventDefault()
-        // console.log('saving');
-        const form = event.target
-        const newJotText = form.body.value
-        AppState.activeJot.UpdatedAt = new Date().toLocaleString()
-        // console.log(newJotText);
-        jotService.setActiveJotBody(newJotText)
-        jotCardController.drawJot()
-    }
+
 
 
 }
