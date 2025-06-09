@@ -7,9 +7,9 @@ body {
 
 main {
   flex-grow: 1;
-  display: flex;
+  /* display: flex;
   place-content: center;
-  align-items: center;
+  align-items: center; */
 }
 
 #pop-toast-container {
@@ -17,4 +17,19 @@ main {
   flex-direction: column;
   justify-content: start;
   align-items: end;
+}
+
+.card-format {
+  background-color: #151421;
+  color: white;
+  border-radius: 20px;
+  border-color: grey;
+}
+
+.card-button-format {
+  min-width: 7vw;
+}
+
+.background {
+  background-color: #00236A;
 }
