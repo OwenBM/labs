@@ -1,6 +1,6 @@
 import { AppState } from "../AppState.js";
 import { jotCardController, JotCardController } from "../controllers/JotCardController.js";
-import { JotController } from "../controllers/JotController.js";
+import { jotController } from "../controllers/JotController.js";
 import { Jot } from "../models/Jot.js";
 import { loadState, saveState } from "../utils/Store.js";
 class JotService {
@@ -65,7 +65,9 @@ class JotService {
         // console.log(newJotText);
         this.setActiveJotBody(newJotText)
         jotCardController.drawJot()
+        jotController.drawActiveJot()
     }
+
 
 }
 

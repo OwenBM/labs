@@ -8,12 +8,14 @@ export class JotController {
     constructor() {
         // console.log('jot controller works');
         AppState.on('activeJot', this.drawActiveJot)
-        // TODO register observer for jots in the appstate, and use your drawjots function as callback
-        // TODO register observer for jots in the appstate, and use your dawJotCount
+        AppState.on("jots", jotCardController.drawJot)
+        AppState.on("jots", this.drawJotCount)
         jotService.loadJots()
         this.drawJotCount()
         this.drawActiveJot()
+
     }
+
 
     addCreateCount() {
         // console.log('bleh');
@@ -62,3 +64,4 @@ export class JotController {
 
 
 }
+export const jotController = new JotController();
