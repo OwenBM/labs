@@ -37,6 +37,7 @@ export class JotController {
         jotService.createJotCard(jotData)
         jotCardController.drawJot()
         this.drawJotCount()
+
     }
 
     drawActiveJot() {

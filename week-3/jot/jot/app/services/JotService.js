@@ -15,7 +15,10 @@ class JotService {
         const jot = new Jot(
             formData.title,
             formData.body || 'Enter your jot here!',
-            new Date().toLocaleString()
+            new Date().toLocaleString(),
+            null,
+            null,
+            formData.color
         );
         // console.log('new jot card!');
         AppState.jots.push(jot)
@@ -41,7 +44,7 @@ class JotService {
 
     loadJots() {
         let jots = loadState('jots', []);
-        jots = jots.map(jot => new Jot(jot.title, jot.body, jot.CreatedAt, jot.UpdatedAt, jot.id));
+        jots = jots.map(jot => new Jot(jot.title, jot.body, jot.CreatedAt, jot.UpdatedAt, jot.id, jot.color));
         AppState.jots = jots;
         // console.log('loaded jots', jots);
     }
